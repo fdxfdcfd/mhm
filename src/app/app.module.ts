@@ -16,6 +16,8 @@ import {
   animate
 } from '@angular/core';
 import { AppComponent } from './app.component';
+import { AppRoutingModule }     from './app-routing.module';
+import { HomeComponent } from './pages/home/home.component';
 
 
 
@@ -24,10 +26,11 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    JsonpModule 
+    JsonpModule,
+    AppRoutingModule
   ],
   declarations: [ 
-    AppComponent, AppComponent
+    AppComponent, AppComponent, HomeComponent
     ],
     providers: [
       ],
