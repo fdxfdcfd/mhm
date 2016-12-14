@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 14, 2016 at 03:39 PM
+-- Generation Time: Dec 14, 2016 at 05:14 PM
 -- Server version: 5.6.33-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.20
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `cate_product` (
   `category_id` int(5) NOT NULL AUTO_INCREMENT,
   `category_name` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `link` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `created` bigint(15) NOT NULL,
   `updated` bigint(15) NOT NULL,
   `status` int(1) NOT NULL,
@@ -39,19 +40,19 @@ CREATE TABLE IF NOT EXISTS `cate_product` (
 -- Dumping data for table `cate_product`
 --
 
-INSERT INTO `cate_product` (`category_id`, `category_name`, `created`, `updated`, `status`) VALUES
-(1, 'Mobile Phones', 1472925059004, 1472925059004, 1),
-(2, 'Desktop', 1472925059004, 1472925059004, 1),
-(3, 'Laptop', 1472925059004, 1472925059004, 1),
-(4, 'Accessories', 1472925059004, 1472925059004, 1),
-(5, 'Software', 1472925059004, 1472925059004, 1),
-(6, 'Sports & Fitness', 1472925059004, 1472925059004, 1),
-(7, 'Footwear', 1472925059004, 1472925059004, 1),
-(8, 'Jewellery', 1472925059004, 1472925059004, 1),
-(9, 'Clothing', 1472925059004, 1472925059004, 1),
-(10, 'Home Decor & Kitchen', 1472925059004, 1472925059004, 1),
-(11, 'Beauty & Healthcare', 1472925059004, 1472925059004, 1),
-(12, 'Toys, Kids & Babies', 1472925059004, 1472925059004, 1);
+INSERT INTO `cate_product` (`category_id`, `category_name`, `link`, `created`, `updated`, `status`) VALUES
+(1, 'Di động', 'di-dong', 1472925059004, 1472925059004, 1),
+(2, 'Desktop', 'may-tinh-ban', 1472925059004, 1472925059004, 1),
+(3, 'Laptop', 'laptop', 1472925059004, 1472925059004, 1),
+(4, 'Phụ Kiện', 'phu-kien', 1472925059004, 1472925059004, 1),
+(5, 'Software', 'phan-mem', 1472925059004, 1472925059004, 1),
+(6, 'Thể thao và thể hình', 'the-thao-the-hinh', 1472925059004, 1472925059004, 1),
+(7, 'Giày dép', 'giay-dep', 1472925059004, 1472925059004, 1),
+(8, 'Trang sức', 'trang-suc', 1472925059004, 1472925059004, 1),
+(9, 'Quần áo', 'quan-ao', 1472925059004, 1472925059004, 1),
+(10, 'Nội thất', 'noi-that', 1472925059004, 1472925059004, 1),
+(11, 'Làm đẹp và chăm sóc sức khỏe', 'lam-dep-va-cham-soc-suc-khoe', 1472925059004, 1472925059004, 1),
+(12, 'Đồ chơi trẻ em', 'do-choi-tre-em', 1472925059004, 1472925059004, 1);
 
 -- --------------------------------------------------------
 
