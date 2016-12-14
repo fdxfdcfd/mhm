@@ -1,6 +1,7 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 
 
 
@@ -8,7 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   
   { path: 'trang-chu',  component: HomeComponent },
-  // { path: 'san-pham/:id',  component: ProductDetailComponent },
+  { path: 'san-pham/:id',  component: ProductDetailComponent },
   // { path: 've-chung-toi',  component: AboutComponent },
   // { path: 'giao-hang',  component: DeliveryComponent },
   // { path: 'tin-tuc', component: NewsComponent},

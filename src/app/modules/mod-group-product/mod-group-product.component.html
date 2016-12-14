@@ -1,0 +1,27 @@
+<div class="content_top">
+    <div class="heading">
+        <h3>{{product_type_item?.product_type_name}}</h3>
+    </div>
+    <div class="see">
+        <p><a routerLink="'/'+product_type_item?.link">Xem tất cả</a>
+        </p>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="section group">
+    <div class="col-md-3" *ngFor="let product of products">
+        <a class="hv" (click)="gotoDetail(product)">
+            <img class="center-block" alt="{{product?.name}}" src="{{product?.img}}" style="margin: 10px auto">
+        </a>
+        <h2>{{product?.name}} </h2>
+        <div class="price-details">
+            <div class="price-number">
+                <p><span class="rupees">{{product?.price | number}} VNĐ</span></p>
+            </div>
+            <div class="add-cart">
+                <h4><a href="#">Add to Cart</a></h4>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
