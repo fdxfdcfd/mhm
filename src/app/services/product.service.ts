@@ -30,4 +30,16 @@ export class ProductService {
     let option = new RequestOptions({ method: "post" });
     return this.http.post(this.url_api, body, option).map(res => res.json());
   }
+  getProductByCondition(Condition) {
+    let out = "{";
+    for (let i in Condition) {
+      if(Condition[i] != '')
+      out += i + ": '" + Condition[i] + "',";
+    }
+    out += "condition: true";
+    out += "}";
+    let body = JSON.stringify(eval("(" + out + ")"));
+    let option = new RequestOptions({ method: "post" });
+    return this.http.post(this.url_api, body, option).map(res => res.json());
+  }
 }

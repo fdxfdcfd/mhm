@@ -51,6 +51,25 @@ else if($input->newProduct)
 	$db->setQuery($lenh_sql);
 	$data = $db->loadAllRow();
 }
+else if($input->condition)
+    {
+        $arr= (array) $input;
+        $where =" 1 = 1 ";
+        foreach( $arr as $key=>$val)
+        {
+            if($key != "condition" && $val != '')       
+            {
+                $where.= "and $key = $val";
+            }             
+        }
+	$lenh_sql = "SELECT * 
+        FROM product p 
+         $where
+        ";
+	
+	$db->setQuery($lenh_sql);
+	$data = $db->loadAllRow();
+}
 else
     {
 	$lenh_sql = "SELECT * FROM product";
