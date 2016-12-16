@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'san-pham-ban-chay', component: ListAllProductComponent, data: { 'cate_product': '', 'product_type': 2 } },
   { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
   // {path: '404', component: PageNotFoundComponent},
-  { path: '**', redirectTo: '404' }
+  { path: '**', redirectTo: 'trang-chu' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
