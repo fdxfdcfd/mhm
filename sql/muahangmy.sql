@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 14, 2016 at 05:14 PM
+-- Generation Time: Dec 16, 2016 at 04:32 PM
 -- Server version: 5.6.33-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.20
 
@@ -136,11 +136,11 @@ CREATE TABLE IF NOT EXISTS `menu` (
 --
 
 INSERT INTO `menu` (`menu_id`, `menu_parent`, `menu_name`, `menu_status`, `page`, `created`, `updated`) VALUES
-(1, 0, 'Home', 1, 'trang-chu', 111, 111),
-(2, 0, 'About', 1, 've-chung-toi', 111, 111),
-(3, 0, 'Delivery', 1, 'giao-hang', 111, 111),
-(4, 0, 'News', 1, 'tin-tuc', 111, 111),
-(5, 0, 'Contact', 1, 'lien-he', 111, 111);
+(1, 0, 'Trang Chủ', 1, 'trang-chu', 111, 111),
+(2, 0, 'Thông tin', 1, 've-chung-toi', 111, 111),
+(3, 0, 'Giao hàng', 1, 'giao-hang', 111, 111),
+(4, 0, 'Liên Hệ', 1, 'lien-he', 11122, 11122),
+(5, 0, 'Tin tức', 1, 'tin-tuc', 111, 111);
 
 -- --------------------------------------------------------
 
@@ -274,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `product_type` (
   `created` int(11) NOT NULL,
   `updated` int(11) NOT NULL,
   PRIMARY KEY (`product_type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `product_type`
