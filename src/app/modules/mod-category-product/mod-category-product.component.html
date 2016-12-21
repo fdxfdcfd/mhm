@@ -3,7 +3,10 @@
         <ul>
             <h3>Sản Phẩm</h3>
             <li *ngFor="let category of categories">
-                <a routerLink="/{{category?.link}}">{{category?.category_name}}</a>
+                <!--<a routerLink="./{{category?.link}}" routerLinkActive="active" 
+                [routerLinkActiveOptions]="exact: true" >{{category?.category_name}}</a>-->
+                <a routerLink="/{{category?.link}}" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">{{category?.category_name}}</a>
             </li>
         </ul>
     </div>

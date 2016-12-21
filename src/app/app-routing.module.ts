@@ -9,6 +9,10 @@ import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ListAllProductComponent } from './pages/list-all-product/list-all-product.component';
+import { ModRouteCategoryComponent } from './modules/mod-route-category/mod-route-category.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AboutResolveService } from './services/about-resolve.service';
+import { CategoryProductService } from './services/category-product.service';
 
 
 const routes: Routes = [
@@ -22,12 +26,17 @@ const routes: Routes = [
   { path: 'tat-ca-san-pham', component: ListAllProductComponent, data: { 'cate_product': '', 'product_type': '' } },
   { path: 'san-pham-moi', component: ListAllProductComponent, data: { 'cate_product': '', 'product_type': 1 } },
   { path: 'san-pham-ban-chay', component: ListAllProductComponent, data: { 'cate_product': '', 'product_type': 2 } },
+  { path: ':category', component: ModRouteCategoryComponent, 
+  resolve: {category: AboutResolveService}
+},
   { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
-  // {path: '404', component: PageNotFoundComponent},
-  { path: '**', redirectTo: 'trang-chu' }
+  {path: '404', component: NotFoundComponent},
+  { path: '**', redirectTo: '404' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+ }
