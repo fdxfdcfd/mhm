@@ -2,6 +2,7 @@
     header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, If-Modified-Since, Cache-Control, Pragma");
 include_once("database.php");
+error_reporting(0);
 $json = file_get_contents('php://input');
 $input = json_decode($json);
 $db = new database();

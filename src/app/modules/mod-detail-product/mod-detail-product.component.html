@@ -1,6 +1,6 @@
-<div class="cont-desc span_1_of_2">
+<div class="cont-desc col-sm-9">
     <div class="product-details">
-        <div class="grid images_3_of_2">
+        <div class="col-sm-6">
             <div id="container">
                 <div id="products_example">
                     <div id="products">
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="desc span_3_of_2">
+        <div class="col-sm-6">
             <h2> {{product?.name}}</h2>
             <p>{{product?.brief}}</p>
             <div class="price">
@@ -125,10 +125,8 @@
                             <a href="#"><img src="images/quality-rating.png" alt="" /></a>
                         </li>
                     </ul>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                        electronic typesetting, remaining essentially unchanged.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                     <div class="your-review">
                         <h3>How Do You Rate This Product?</h3>
                         <p>Write Your Own Review?</p>
@@ -157,14 +155,14 @@
         </div>
     </div>
     <script type="text/javascript">
-    $(document).ready(function () {
-        $('#horizontalTab').easyResponsiveTabs({
-            type: 'default', //Types: default, vertical, accordion           
-            width: 'auto', //auto or any width like 600px
-            fit: true   // 100% fit in a container
+        $(document).ready(function() {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion           
+                width: 'auto', //auto or any width like 600px
+                fit: true // 100% fit in a container
+            });
         });
-    });
-   </script>
+    </script>
     <div class="content_bottom">
         <div class="heading">
             <h3>Related Products</h3>
@@ -174,5 +172,5 @@
         </div>
         <div class="clear"></div>
     </div>
-     <app-mod-group-product [product_type]=2></app-mod-group-product>
+    <app-mod-group-product [product_type]=2></app-mod-group-product>
 </div>

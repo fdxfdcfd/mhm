@@ -1,4 +1,9 @@
 <div class="section group">
+    <div class="row">
+        <label for="">Tim theo ten</label>
+        <input type="text" name="" id="input1/(\w+)/\u\1/g" class="form-control" value="" required="required" pattern="" title="">
+
+    </div>
     <div class="col-md-3" *ngFor="let product of products">
         <a class="hv" (click)="gotoDetail(product)">
             <img class="center-block" alt="{{product?.name}}" src="{{product?.img}}" style="margin: 10px auto">
@@ -13,5 +18,8 @@
             </div>
             <div class="clear"></div>
         </div>
+    </div>
+    <div class="" *ngIf="products?.length == 0">
+        ko co san pham
     </div>
 </div>

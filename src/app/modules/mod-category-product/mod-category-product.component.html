@@ -1,13 +1,8 @@
-<div class="header_bottom_left">
-    <div class="categories">
-        <ul>
-            <h3>Sản Phẩm</h3>
-            <li *ngFor="let category of categories">
-                <!--<a routerLink="./{{category?.link}}" routerLinkActive="active" 
-                [routerLinkActiveOptions]="exact: true" >{{category?.category_name}}</a>-->
-                <a routerLink="/{{category?.link}}" routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }">{{category?.category_name}}</a>
-            </li>
-        </ul>
-    </div>
+<div class="categories">
+    <ul>
+        <h3>Sản Phẩm</h3>
+        <li *ngFor="let category of categories">
+            <a routerLink="/{{category?.link}}" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{category?.category_name}}</a>
+        </li>
+    </ul>
 </div>
