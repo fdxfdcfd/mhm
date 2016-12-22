@@ -36,8 +36,6 @@ import { ListAllProductComponent } from './pages/list-all-product/list-all-produ
 import { ModListAllProductComponent } from './modules/mod-list-all-product/mod-list-all-product.component';
 import { ModRouteCategoryComponent } from './modules/mod-route-category/mod-route-category.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { AboutResolveService } from './services/about-resolve.service';
-import { CategoryProductService } from './services/category-product.service';
 
 
 
@@ -52,7 +50,7 @@ import { CategoryProductService } from './services/category-product.service';
   declarations: [
     AppComponent, AppComponent, HomeComponent, WidFooterComponent, WidHeaderComponent, ModHeaderTopComponent, ModMenuComponent, ModHeaderSlideComponent, ModCategoryProductComponent, ModGroupProductComponent, ProductDetailComponent, ModDetailProductComponent, AboutComponent, DeliveryComponent, NewsComponent, ContactComponent, ListAllProductComponent, ModListAllProductComponent, ModRouteCategoryComponent, NotFoundComponent
   ],
-  providers: [ApacheLinkService,AboutResolveService,CategoryProductService 
+  providers: [ApacheLinkService, 
   ],
   bootstrap: [AppComponent]
 })

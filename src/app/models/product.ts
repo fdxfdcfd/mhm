@@ -5,7 +5,7 @@ export class Product {
     img:string;
     brief: string;
     detail: string;
-    product_cate_id: number;
+    category_id: number;
     partner_id: number;
     inventory: number;
     views: number;

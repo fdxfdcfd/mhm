@@ -16,4 +16,21 @@ export class CategoryProductService {
   getCategoryProductList() {
     return this.http.get(this.url_api).map(res => res.json());
   }
+  getCategoryProductCondition(condition){
+    let out = "{";
+    for (let i in condition) {
+      if(condition[i] != '')
+      out += i + ": '" + condition[i] + "',";
+    }
+    out += "condition: true";
+    out += "}";
+    let body = JSON.stringify(eval("(" + out + ")"));
+    let option = new RequestOptions({ method: "post" });
+    return this.http.post(this.url_api, body, option).map(res => res.json());
+  }
+  getCategoryProductByLink(link) {
+    let body = JSON.stringify({ "link": link });
+    let option = new RequestOptions({ method: "post" });
+    return this.http.post(this.url_api, body, option).map(res => res.json());
+  }
 }

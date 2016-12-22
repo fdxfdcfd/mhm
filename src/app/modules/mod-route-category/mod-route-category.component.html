@@ -6,8 +6,10 @@
     </div>
     <div class="main">
         <div class="content">
-            <!--<app-mod-list-all-product [data]=data></app-mod-list-all-product>-->
-            <!--<div *ngFor="let item of cate">{{item}}</div>-->
+            <div *ngIf="categories !== NULL">
+                <app-mod-list-all-product [data]=data >
+                </app-mod-list-all-product>
+            </div>
         </div>
     </div>
 </div>

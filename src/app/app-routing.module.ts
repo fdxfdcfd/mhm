@@ -23,15 +23,14 @@ const routes: Routes = [
   { path: 'giao-hang', component: DeliveryComponent },
   { path: 'tin-tuc', component: NewsComponent },
   { path: 'lien-he', component: ContactComponent },
-  { path: 'tat-ca-san-pham', component: ListAllProductComponent, data: { 'cate_product': '', 'product_type': '' } },
-  { path: 'san-pham-moi', component: ListAllProductComponent, data: { 'cate_product': '', 'product_type': 1 } },
-  { path: 'san-pham-ban-chay', component: ListAllProductComponent, data: { 'cate_product': '', 'product_type': 2 } },
-  { path: ':category', component: ModRouteCategoryComponent, 
-  resolve: {category: AboutResolveService}
-},
+  { path: 'tat-ca-san-pham', component: ListAllProductComponent, data: { 'category_id': '', 'product_type': '' } },
+  { path: 'san-pham-moi', component: ListAllProductComponent, data: { 'category_id': '', 'product_type': 1 } },
+  { path: 'san-pham-ban-chay', component: ListAllProductComponent, data: { 'category_id': '', 'product_type': 2 } },
+  { path: '404', component: NotFoundComponent},
+  { path: ':category', component: ModRouteCategoryComponent},
   { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
-  {path: '404', component: NotFoundComponent},
-  { path: '**', redirectTo: '404' }
+  
+  { path: '**', redirectTo: '/404' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -40,6 +40,7 @@ export class ProductService {
     out += "}";
     let body = JSON.stringify(eval("(" + out + ")"));
     let option = new RequestOptions({ method: "post" });
+    console.log(this.http.post(this.url_api, body, option).map(res => res.json()));
     return this.http.post(this.url_api, body, option).map(res => res.json());
   }
 }

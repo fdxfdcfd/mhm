@@ -5,12 +5,30 @@ include_once("database.php");
 $json = file_get_contents('php://input');
 $input = json_decode($json);
 $db = new database();
-if($input->product_cate_id)
+
+if($input->condition)
+    {
+        $arr= (array) $input;
+        $where =" 1 = 1 ";
+        foreach( $arr as $key=>$val)
+        {
+            if($key != "condition" && $val != '')       
+            {
+                $where.= "and $key = $val";
+            }             
+        }
+	$lenh_sql = "SELECT * 
+        FROM product p 
+         WHERE $where
+        ";
+	$db->setQuery($lenh_sql);
+	$data = $db->loadAllRow();
+} else if($input->category_id)
     {
 	$lenh_sql = "SELECT p.*, c.name 
-        FROM product p, cate_product c 
-        WHERE p.product_cate_id = c.id
-        AND p.product_cate_id = $input->product_cate_id";
+        FROM product p, category c 
+        WHERE p.category_id = c.id
+        AND p.category_id = $input->category_id";
 	
 	$db->setQuery($lenh_sql);
 	$data = $db->loadAllRow();
@@ -46,25 +64,6 @@ else if($input->newProduct)
 	$lenh_sql = "SELECT * 
         FROM product p 
         LIMIT 0,4
-        ";
-	
-	$db->setQuery($lenh_sql);
-	$data = $db->loadAllRow();
-}
-else if($input->condition)
-    {
-        $arr= (array) $input;
-        $where =" 1 = 1 ";
-        foreach( $arr as $key=>$val)
-        {
-            if($key != "condition" && $val != '')       
-            {
-                $where.= "and $key = $val";
-            }             
-        }
-	$lenh_sql = "SELECT * 
-        FROM product p 
-         $where
         ";
 	
 	$db->setQuery($lenh_sql);
